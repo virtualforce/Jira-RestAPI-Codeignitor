@@ -10,7 +10,7 @@ In this writeup, I will highlight the challenges we faced and show how to Connec
 
 # Things needed
  
-You need a valid Jira Account in order to use REST API functionalities. You can create a trial account which lasts for 30 days or use your subscribed account. For the purpose of this demo, I will use a trial account.
+You need a valid Jira Account in order to use REST API functionalities. You can create a trial account which lasts for 15 days or use your subscribed account. For the purpose of this demo, I will use a trial account.
    
 # Getting started
 

@@ -10,10 +10,10 @@ class JiraRest extends CI_Controller {
 		ini_set('error_reporting', E_STRICT);
 		$config = array();
 		$this->load->helper('jira_helper');
-		$config['username'] = 'admin';
-		$config['password'] = 'Khalid11';
+		$config['username'] = 'jirausername';
+		$config['password'] = 'jirapassword';
 		$config['port'] = 443;
-		$config['host'] = 'writeup.atlassian.net';
+		$config['host'] = 'jirahosturl';
 		$newbug = new Jira($config);
 		$data = (object)array();
 		$data->fields->project->key = "WRIT";
@@ -29,10 +29,10 @@ class JiraRest extends CI_Controller {
 		ini_set('error_reporting', E_STRICT);
 		$config = array();
 		$this->load->helper('jira_helper');
-		$config['username'] = 'admin';
-		$config['password'] = 'Khalid11';
+		$config['username'] = 'jirausername';
+		$config['password'] = 'jirapassword';
 		$config['port'] = 443;
-		$config['host'] = 'writeup.atlassian.net';
+		$config['host'] = 'jirahosturl';
 		$newbug = new Jira($config);
 		/*get jira Issues description*/
 	 	$issuKey = trim('WRIT-3');
@@ -60,10 +60,10 @@ class JiraRest extends CI_Controller {
 		ini_set('error_reporting', E_STRICT);
 		$config = array();
 		$this->load->helper('jira_helper');
-		$config['username'] = 'admin';
-		$config['password'] = 'Khalid11';
+		$config['username'] = 'jirausername';
+		$config['password'] = 'jirapassword';
 		$config['port'] = 443;
-		$config['host'] = 'writeup.atlassian.net';
+		$config['host'] = 'jirahosturl';
 		$newbug = new Jira($config);
 		/*get jira Issues description*/
 		$issuKey = trim('WRIT-3');
