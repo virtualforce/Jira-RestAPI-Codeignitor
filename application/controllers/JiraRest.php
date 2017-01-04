@@ -35,7 +35,7 @@ class JiraRest extends CI_Controller {
 		$config['host'] = 'jirahosturl';
 		$newbug = new Jira($config);
 		/*get jira Issues description*/
-	 	$issuKey = trim('WRIT-3');
+	 	$issuKey = trim('jiraissuekey'); /*issue key from jira*/
 		$getIssue = (array)$newbug->getIssue($issuKey);
 		$count = 1;
 					foreach ($getIssue as $test){
@@ -48,7 +48,7 @@ class JiraRest extends CI_Controller {
 		/*Print Issue Summary*/
 		$responseBodyGetIssue->fields->summary;
 		$data = (object)array();
-		$data->fields->project->key = "WRIT";
+		$data->fields->project->key = "jiraprojectkey";
         $data->fields->issuetype->name = 'Bug';
 		$data->fields->summary = trim("dummy text of the printing and typesetting industry type specimen book. It has survived not only");
 		$result = (array) $newbug->updateIssue($data,$issuKey);
@@ -66,7 +66,7 @@ class JiraRest extends CI_Controller {
 		$config['host'] = 'jirahosturl';
 		$newbug = new Jira($config);
 		/*get jira Issues description*/
-		$issuKey = trim('WRIT-3');
+	 	$issuKey = trim('jiraissuekey'); /*issue key from jira*/
 		$result = (array) $newbug->deleteIssue($issuKey);
 		echo '<pre>' . print_r($result, true) . '</pre>';exit;
 }
